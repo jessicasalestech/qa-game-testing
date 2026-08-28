@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <title>Snake QA — Jogo de teste</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="game">
+      <h1>🐍 Snake <span class="sub">QA Edition</span></h1>
+      <div class="hud">
+        <div class="score">Placar: <strong id="score">0</strong></div>
+        <button id="restart" type="button">Novo jogo</button>
+      </div>
+      <div class="wrap">
+        <canvas id="board" width="300" height="300"></canvas>
+        <div id="game-over" class="overlay hidden">GAME OVER</div>
+      </div>
+      <p class="hint">Use as setas do teclado para mover a cobra.</p>
+    </div>
+    <script src="snakeLogic.js"></script>
+    <script src="snake-game.js"></script>
+  </body>
+</html>

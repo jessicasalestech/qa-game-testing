@@ -1,0 +1,21 @@
+{
+  "name": "qa-game-testing",
+  "version": "1.0.0",
+  "description": "Portfólio QA — Automação de testes em jogos. Testes unitários da lógica de jogo (2048) com Jest + testes E2E do jogo real no browser com Playwright.",
+  "author": "Jessica Sales",
+  "license": "MIT",
+  "private": true,
+  "engines": {
+    "node": ">=20.10"
+  },
+  "scripts": {
+    "test:unit": "jest",
+    "test:e2e": "playwright test",
+    "test": "npm run test:unit && npm run test:e2e",
+    "install:browsers": "playwright install chromium"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.52.0",
+    "jest": "^29.7.0"
+  }
+}
