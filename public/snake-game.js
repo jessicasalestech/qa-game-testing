@@ -18,7 +18,7 @@
     ctx.fillStyle = '#12141c';
     ctx.fillRect(0, 0, canvas.width, canvas.height);
 
-    // grade
+    // grid
     ctx.strokeStyle = '#262a3a';
     ctx.lineWidth = 1;
     for (let x = 0; x <= w; x++) {
@@ -28,13 +28,13 @@
       ctx.beginPath(); ctx.moveTo(0, y * CELL); ctx.lineTo(w * CELL, y * CELL); ctx.stroke();
     }
 
-    // alimento
+    // food
     if (food) {
       ctx.fillStyle = '#e74c3c';
       ctx.fillRect(food.x * CELL + 2, food.y * CELL + 2, CELL - 4, CELL - 4);
     }
 
-    // cobra
+    // snake
     snake.forEach((seg, i) => {
       const isHead = i === snake.length - 1;
       ctx.fillStyle = isHead ? '#2ecc71' : '#58d68d';
@@ -63,11 +63,11 @@
 
   document.getElementById('restart').addEventListener('click', start);
 
-  // --- API de leitura para os testes E2E ---
+  // --- Read-only API for E2E tests ---
   window.getGameState = () => JSON.parse(JSON.stringify(state));
 
-  // --- Test hooks (apenas ao abrir com ?test) ---
-  // Permite configurar o estado para cenários determinísticos (ex.: comer alimento)
+  // --- Test hooks (only enabled when opened with ?test) ---
+  // Allows setting the state for deterministic scenarios (e.g., eating the food)
   if (new URLSearchParams(location.search).has('test')) {
     window.__setTestState = (s) => {
       state = s;

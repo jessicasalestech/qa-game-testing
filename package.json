@@ -1,7 +1,7 @@
 {
   "name": "qa-game-testing",
   "version": "1.0.0",
-  "description": "Portfólio QA — Automação de testes em jogos. Testes unitários da lógica de jogo (2048) com Jest + testes E2E do jogo real no browser com Playwright.",
+  "description": "QA Portfolio — game test automation. Unit tests of the game logic with Jest + E2E tests of the real game in the browser with Playwright.",
   "author": "Jessica Sales",
   "license": "MIT",
   "private": true,

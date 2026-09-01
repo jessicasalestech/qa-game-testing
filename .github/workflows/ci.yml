@@ -12,7 +12,7 @@ permissions:
 
 jobs:
   quality:
-    name: Lógica (Jest) + E2E (Playwright)
+    name: Logic (Jest) + E2E (Playwright)
     runs-on: ubuntu-latest
     timeout-minutes: 15
 
@@ -32,13 +32,13 @@ jobs:
       - name: Install browsers
         run: npx playwright install --with-deps chromium
 
-      - name: Testes unitários da lógica do jogo (Jest)
+      - name: Unit tests of the game logic (Jest)
         run: npm run test:unit
 
-      - name: Testes E2E do jogo no browser (Playwright)
+      - name: E2E tests of the game in the browser (Playwright)
         run: npm run test:e2e
 
-      - name: Publicar relatório HTML (artefato)
+      - name: Publish HTML report (artifact)
         if: always()
         uses: actions/upload-artifact@v7
         with:
@@ -46,7 +46,7 @@ jobs:
           path: playwright-report/
           retention-days: 14
 
-      - name: Publicar screenshots de falha
+      - name: Publish failure screenshots
         if: failure()
         uses: actions/upload-artifact@v7
         with:
