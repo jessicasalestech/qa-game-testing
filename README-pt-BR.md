@@ -1,6 +1,6 @@
 # 🎮 QA Game Testing — Snake
 
-[![English](https://img.shields.io/badge/English-blue?style=plastic&logo=openbadges&logoColor=white)](README.md) [![Português](https://img.shields.io/badge/Portugu%C3%AAs-green?style=plastic&logo=openbadges&logoColor=white)](README-pt-BR.md)
+[![Português](https://img.shields.io/badge/Portugu%C3%AAs-green?style=plastic&logo=openbadges&logoColor=white)](README-pt-BR.md) [![English](https://img.shields.io/badge/English-blue?style=plastic&logo=openbadges&logoColor=white)](README.md)
 
 Projeto de **portfólio de QA** focado em **testes de jogos**, aplicado a um jogo **Snake**
 feito sob medida para automação. Demonstra **dois níveis complementares de teste de games**:
